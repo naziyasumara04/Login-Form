@@ -1,0 +1,27 @@
+#container{
+    
+    border:2px solid rgb(3, 3, 104);
+    font-size: 30px;
+    height:17em;
+    width:15em;
+    margin:auto;
+    border-radius: 10px;
+    
+}
+h1{
+    text-align: center;
+    margin-top:3rem;
+    color:rgb(9, 9, 80);
+}
+
+@media(max-width:641px){
+    #container{
+        width:10em;
+    }
+}
+
+@media(max-width:322px){
+    #container{
+        width:6em;
+    }
+}
