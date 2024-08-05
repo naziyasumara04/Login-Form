@@ -1,17 +1,24 @@
+#outer-container{
+    margin-top:30px;
+}
+#outer-container h1{
+    text-align: center;
+    
+    color:rgb(9, 9, 80);
+}
+
 #container{
     
     border:2px solid rgb(3, 3, 104);
-    font-size: 30px;
-    height:17em;
-    width:15em;
+    font-size: 20px;
+    height:20em;
+    width:19em;
+    /* display: flex; */
+    /* text-align: center; */
     margin:auto;
+    margin-top:4rem;
     border-radius: 10px;
     
-}
-h1{
-    text-align: center;
-    margin-top:3rem;
-    color:rgb(9, 9, 80);
 }
 
 @media(max-width:641px){
@@ -24,4 +31,34 @@ h1{
     #container{
         width:6em;
     }
+}
+
+#inner-container{
+    /* background-color: aquamarine; */
+    /* padding:0.5em; */
+    /* margin-top:10px; */
+    margin:10px 0.5em;
+}
+#user{
+    margin:1em;
+
+
+}
+#pass{
+    margin:1em;
+
+
+}
+
+#btn{
+    text-align: center;
+    margin-top:2em;
+
+
+}
+#ulabel{
+    margin:1em;
+}
+#plabel{
+    margin:1em;
 }
