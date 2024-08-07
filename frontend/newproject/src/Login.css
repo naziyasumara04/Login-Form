@@ -1,9 +1,9 @@
 #outer-container
 {
-    margin-top:30px;
+    margin-top:10px;
 }
 
-#outer-container h1
+#outer-container h2
 {
     text-align: center;
     
@@ -13,13 +13,12 @@
 #container
 {   
     border:2px solid rgb(3, 3, 104);
-    font-size: 20px;
+    font-size: 15px;
     height:20em;
     width:19em;
     margin:auto;
-    margin-top:4rem;
+    margin-top:2.5rem;
     border-radius: 10px;
-    
 }
 
 @media(max-width:641px)
@@ -38,19 +37,17 @@
 
 #inner-container
 {
-    margin:10px 0.5em;
+    margin:8px 0.4em;
 }
 
 #user
 {
-    margin:1em;
+    margin:0.8em;
 }
 
 #pass
 {
-    margin:1em;
-
-
+    margin:0.8em;
 }
 
 #btn
