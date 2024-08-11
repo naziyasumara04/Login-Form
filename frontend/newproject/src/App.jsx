@@ -1,18 +1,25 @@
 import Login from "./Login";
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './App.css';
-
-
+// import Signup from "./Signup";
 
 
 function App() {
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100">
-      <Login/>
-    </div>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/signup">
+    //       <Signup />
+    //     </Route>
+    //     <Route path="/">
+    //       <Login />
+    //     </Route>
+    //   </Routes>
+    // </Router>
+    <>
+    <Login/>
+    {/* <Signup/> */}
+    </>
     
   );
 }

@@ -1,6 +1,6 @@
 #outer-container
 {
-    margin-top:10px;
+    margin-top:5px;
 }
 
 #outer-container h2
@@ -17,7 +17,7 @@
     height:20em;
     width:19em;
     margin:auto;
-    margin-top:2.5rem;
+    margin-top:2rem;
     border-radius: 10px;
 }
 
@@ -64,4 +64,9 @@
 #plabel
 {
     margin:1em;
+}
+
+#newUser{
+    text-align: center;
+    margin-top:0.5em;
 }
