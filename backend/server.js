@@ -64,11 +64,17 @@ app.post('/signup',(req,res)=>{
   res.render("signup.ejs");
 });
 
-app.get("/signup",(req,res)=>{
-  res.send("welcome to my website");
-});
+// app.get("/signup",(req,res)=>{
+//   res.send("welcome to my website");
+// });
 
+app.get("/",(req,res)=>{
+  res.send("i am root");
+})
 
+app.get("*",(req,res)=>{
+  res.send("This page does not exist");
+})
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
