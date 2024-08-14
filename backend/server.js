@@ -28,6 +28,9 @@ const connection =mysql.createConnection({
     }
     console.log('Connected to the database');
 });
+app.get("/login",(req,res)=>{
+   res.render("log.ejs")
+});
 
 app.post('/login', (req, res) => {
     console.log(req.body);
@@ -72,7 +75,7 @@ app.post('/signup',(req,res)=>{
 });
 
 app.get("/",(req,res)=>{
-  res.send("I am root");
+  res.render("FirstPage.ejs");
 })
 
 app.get("*",(req,res)=>{
