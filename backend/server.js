@@ -9,6 +9,9 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
+// app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '/public'))); 
+
 const port=3000;
 
 const connection =mysql.createConnection({
@@ -41,7 +44,11 @@ app.post('/login', (req, res) => {
       }catch(err){
           console.log(err);
       };
-    res.render("log.ejs",{username});
+      res.send("welcome to my website");
+});
+
+app.get("/signup",(req,res)=>{
+  res.render("signup.ejs");
 });
 
 app.post('/signup',(req,res)=>{
@@ -61,15 +68,11 @@ app.post('/signup',(req,res)=>{
       }catch(err){
           console.log(err);
       };
-  res.render("signup.ejs");
+  res.send("welcome to my website");
 });
 
-// app.get("/signup",(req,res)=>{
-//   res.send("welcome to my website");
-// });
-
 app.get("/",(req,res)=>{
-  res.send("i am root");
+  res.send("I am root");
 })
 
 app.get("*",(req,res)=>{

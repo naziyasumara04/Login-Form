@@ -6,19 +6,8 @@ import React from 'react';
 
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/signup">
-    //       <Signup />
-    //     </Route>
-    //     <Route path="/">
-    //       <Login />
-    //     </Route>
-    //   </Routes>
-    // </Router>
     <>
     <Login/>
-    {/* <Signup/> */}
     </>
     
   );

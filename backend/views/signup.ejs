@@ -1,29 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp here</title>
-</head>
+<%- include("includes/head.ejs")%>
 <body>
+  <h2 class="sign-up">Sign Up</h2>
     <div class="signup-container">
-        <h2>Sign Up</h2>
-        <form METHOD="POST" action="http://localhost:3000/">
-          <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required />
+        
+        <form METHOD="POST" action="http://localhost:3000/signup">
+          <div class="cont">
+            <label for="username" id="ulabel">Username:</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Enter username" required />
           </div>
-          <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required />
+          <div class="cont">
+            <label for="password" id="plabel">Password:</label>
+            <input type="password" id="password" name="password" class="form-control"  placeholder="Enter password"  required />
           </div>
-          <div>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
+          <div class="cont">
+              <label for="email" id="elabel">Email:</label>
+              <br/>
+              <input type="email" id="email" name="email" class="form-control" placeholder="enter e-mail" required />
           </div>
-          <button type="submit">Sign Up</button>
+          <div id="btn">
+          <button type="submit" class="btn btn-primary" id="signup-btn">Sign Up</button>
+        </div>
         </form>
       </div>
-    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 </body>
 </html>

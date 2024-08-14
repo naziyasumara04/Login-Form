@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 
 import './Login.css';
-import { Link } from 'react-router-dom';
+
 
 export default function Login(){
     return(
@@ -24,11 +24,9 @@ export default function Login(){
             </div>
           </div>
         </form>
-        
-        
       </div>
       
-      <p id="newUser">New user?Sign Up here <form action="http://localhost:3000/signup" method="post"><button className="btn btn-primary">Signup</button></form></p>
+       <p id="newUser">New user?Sign Up here <form action="http://localhost:3000/signup" method="get"><button className="btn btn-primary">Signup</button></form></p>
       
     </div>
     )
