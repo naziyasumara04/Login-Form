@@ -11,6 +11,10 @@ app.set('views', path.join(__dirname, '/views'));
 
 // app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, '/public'))); 
+app.use(express.static(path.join(__dirname, '/public/CSS'))); 
+
+
+// app.use('/Images', express.static(path.join(__dirname, '/Images')));
 
 const port=3000;
 
@@ -24,7 +28,7 @@ const connection =mysql.createConnection({
   connection.connect((err) => {
     if (err) {
         console.error('Error connecting to the database:', err);
-        process.exit(1); // Exit the process with an error code
+        process.exit(1);
     }
     console.log('Connected to the database');
 });
@@ -76,11 +80,21 @@ app.post('/signup',(req,res)=>{
 
 app.get("/",(req,res)=>{
   res.render("FirstPage.ejs");
+});
+
+
+
+app.get("/menu",(req,res)=>{
+  res.render("menu.ejs");
+});
+
+app.get("/about",(req,res)=>{
+  res.render("about.ejs");
 })
 
 app.get("*",(req,res)=>{
   res.send("This page does not exist");
-})
+});
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
@@ -89,41 +103,5 @@ app.listen(port, () => {
 
 
 
-// app.get('/', function (req, res) {
-  // res.send('hey I am root');
-//  let count="select count(*) from LoginInfo";
-
-//   try{
-//     connection.query(count, (err,result)=>{
-//       if (err) throw err;
-//         let num=result[0]["count(*)"]
-//         console.log(result[0]["count(*)"]); // results contains rows returned by server
-//         res.render("count.ejs",{num});
-//       }
-//     );
 
 
-//   }catch(err){
-//     console.log(err);
-//     res.send("error in DB");
-
-//   }
-// });
-
-// app.get("/data",(req,res)=>{
-//   let data="select * from LoginInfo";
-//   try{
-//     connection.query(data, (err,result)=>{
-//       if (err) throw err;
-        // let num=result[0]["count(*)"]
-//         console.log(result); // results contains rows returned by server
-//         res.send(result[6].username);
-//       }
-//     );
-//   }catch(err){
-//     console.log(err);
-//     res.send("error in DB");
-
-//   }
-
-// });
