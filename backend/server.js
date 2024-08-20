@@ -51,7 +51,7 @@ app.post('/login', (req, res) => {
       }catch(err){
           console.log(err);
       };
-      res.send("welcome to my website");
+      res.render("FirstPage.ejs");
 });
 
 app.get("/signup",(req,res)=>{
@@ -75,7 +75,7 @@ app.post('/signup',(req,res)=>{
       }catch(err){
           console.log(err);
       };
-  res.send("welcome to my website");
+  res.render("FirstPage.ejs");
 });
 
 app.get("/",(req,res)=>{
@@ -90,6 +90,31 @@ app.get("/menu",(req,res)=>{
 
 app.get("/about",(req,res)=>{
   res.render("about.ejs");
+});
+
+app.get("/contact",(req,res)=>{
+  res.render("contact.ejs");
+});
+
+app.post("/contact",(req,res)=>{
+  console.log(req.body);
+    let {name,email,message} = req.body;
+    
+    const sql="insert into contactInfo (name,email,message) values (?,?,?)";
+    let val=[name,
+             email,
+             message
+            ];
+    try{
+        connection.query(sql,val,(err,result)=>{
+          if(err) throw err;
+          console.log(result);
+        })
+      }catch(err){
+          console.log(err);
+      };
+  res.render("FirstPage.ejs");
+
 })
 
 app.get("*",(req,res)=>{
